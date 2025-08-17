@@ -90,43 +90,129 @@ Puedes personalizar el contenido y los colores a tu gusto.
         </section>
 
         <!-- Sección de Proyectos -->
-        <section id="proyectos" class="py-16 md:py-24 bg-gray-800">
-            <div class="container mx-auto px-4 text-center">
-                <h2 class="section-title mx-auto">Mis Proyectos</h2>
-                <p class="text-gray-400 max-w-3xl mx-auto mb-12">
-                    Estos proyectos demuestran mi capacidad para combinar el análisis de datos, la informática y la innovación para resolver problemas reales.
+        !DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Proyectos - Juan Luis Campos</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración para el tema de colores de Tailwind -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif'],
+            },
+            colors: {
+                indigo: {
+                    500: '#6366f1',
+                    600: '#4f46e5',
+                },
+                gray: {
+                    800: '#1f2937',
+                    700: '#374151',
+                    400: '#9ca3af',
+                    300: '#d1d5db',
+                }
+            }
+          }
+        }
+      }
+    </script>
+    <!-- Fuente Inter de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .section-title {
+        position: relative;
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: #d1d5db; /* gray-300 */
+        margin-bottom: 2rem;
+        display: inline-block;
+      }
+      .section-title::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 4px;
+        background-color: #6366f1; /* indigo-500 */
+        border-radius: 9999px;
+      }
+    </style>
+</head>
+<body class="bg-gray-800 text-white min-h-screen flex items-center justify-center py-10">
+
+<!-- Sección de Proyectos -->
+<section id="proyectos" class="py-16 md:py-24 w-full">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="section-title mx-auto">Mis Proyectos</h2>
+        <p class="text-gray-400 max-w-3xl mx-auto mb-12">
+            Estos proyectos demuestran mi capacidad para combinar la gestión, la tecnología y la innovación para resolver problemas reales.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Proyecto 1: Tesis de Magister -->
+            <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
+                <!-- Fallback de imagen con texto descriptivo -->
+                <img src="https://placehold.co/600x400/374151/9ca3af?text=Innovaci%C3%B3n" alt="Imagen del Proyecto Tesis" class="rounded-lg mb-4 w-full h-auto">
+                <h3 class="text-xl font-bold text-white mb-2">Tesis de Magíster: Innovación de Proceso</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    Evalué la factibilidad de un proyecto de innovación de proceso utilizando las metodologías Stage-Gate y el Modelo de Negocios Canvas.
                 </p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Proyecto 1 -->
-                    <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/475569/94a3b8?text=Proyecto+1" alt="Imagen del Proyecto 1" class="rounded-lg mb-4">
-                        <h3 class="text-xl font-bold text-white mb-2">Análisis de Mercado Laboral</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Un estudio de las tendencias de empleo en Chile utilizando datos públicos para identificar oportunidades en el sector tecnológico.
-                        </p>
-                        <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm">Ver Proyecto</a>
-                    </div>
-                    <!-- Proyecto 2 -->
-                    <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/475569/94a3b8?text=Proyecto+2" alt="Imagen del Proyecto 2" class="rounded-lg mb-4">
-                        <h3 class="text-xl font-bold text-white mb-2">Automatización de Tareas</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Desarrollo de un script en Python para automatizar la extracción de datos de sitios web, ahorrando tiempo y mejorando la eficiencia.
-                        </p>
-                        <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm">Ver Proyecto</a>
-                    </div>
-                    <!-- Proyecto 3 -->
-                    <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
-                        <img src="https://placehold.co/600x400/475569/94a3b8?text=Proyecto+3" alt="Imagen del Proyecto 3" class="rounded-lg mb-4">
-                        <h3 class="text-xl font-bold text-white mb-2">Visualización de Datos de E-commerce</h3>
-                        <p class="text-gray-400 text-sm mb-4">
-                            Un análisis visual de un conjunto de datos de ventas de una tienda en línea para identificar patrones de compra y oportunidades de crecimiento.
-                        </p>
-                        <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm">Ver Proyecto</a>
-                    </div>
-                </div>
+                <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm transition-colors duration-300">Ver Detalles</a>
             </div>
-        </section>
+            <!-- Proyecto 2: Efolder -->
+            <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
+                <!-- Fallback de imagen con texto descriptivo -->
+                <img src="https://placehold.co/600x400/374151/9ca3af?text=Digitalizaci%C3%B3n" alt="Imagen del Proyecto Efolder" class="rounded-lg mb-4 w-full h-auto">
+                <h3 class="text-xl font-bold text-white mb-2">Digitalización de Procesos (Efolder)</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    Dirigí la implementación de un sistema que digitalizó más de 30 procesos, logrando una reducción del 25% en los tiempos de gestión.
+                </p>
+                <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm transition-colors duration-300">Ver Detalles</a>
+            </div>
+            <!-- Proyecto 3: Nagios -->
+            <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/374151/9ca3af?text=Monitoreo" alt="Imagen del Proyecto Nagios" class="rounded-lg mb-4 w-full h-auto">
+                <h3 class="text-xl font-bold text-white mb-2">Monitoreo Proactivo (Nagios)</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    Implementé un sistema de monitoreo que mejoró la detección de fallos en un 60%, garantizando una mayor estabilidad en la infraestructura.
+                </p>
+                <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm transition-colors duration-300">Ver Detalles</a>
+            </div>
+            <!-- Proyecto 4: Xen -->
+            <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/374151/9ca3af?text=Virtualizaci%C3%B3n" alt="Imagen del Proyecto Xen" class="rounded-lg mb-4 w-full h-auto">
+                <h3 class="text-xl font-bold text-white mb-2">Virtualización de Servidores (Xen)</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    Lideré la migración del 50% de las máquinas físicas a entornos virtuales, mejorando la utilización de recursos y la resiliencia del sistema.
+                </p>
+                <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm transition-colors duration-300">Ver Detalles</a>
+            </div>
+            <!-- Proyecto 5: OneDrive -->
+            <div class="bg-gray-700 rounded-2xl p-6 shadow-xl hover:shadow-indigo-500/50 transition-shadow duration-300">
+                <img src="https://placehold.co/600x400/374151/9ca3af?text=Automatizaci%C3%B3n" alt="Imagen del Proyecto OneDrive" class="rounded-lg mb-4 w-full h-auto">
+                <h3 class="text-xl font-bold text-white mb-2">Automatización de Respaldos (OneDrive)</h3>
+                <p class="text-gray-400 text-sm mb-4">
+                    Implementé un protocolo de respaldo automatizado para 230 equipos, reduciendo el riesgo de pérdida de datos a un nivel mínimo.
+                </p>
+                <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-6 rounded-full text-sm transition-colors duration-300">Ver Detalles</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+
 
         <!-- Sección Sobre Mí -->
         <section id="sobre-mi" class="py-16 md:py-24">
